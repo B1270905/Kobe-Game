@@ -1,9 +1,50 @@
 [gd_scene format=3 uid="uid://brhaot1rxbmk4"]
 
-[node name="Control" type="Control" unique_id=151539742]
+[ext_resource type="Script" uid="uid://b1nc13x37mp42" path="res://Levels/Title_screen.gd" id="1_44lj5"]
+[ext_resource type="Texture2D" uid="uid://8u7mhamxqlip" path="res://Levels/images.webp" id="2_m1h33"]
+
+[node name="Title_Screen" type="Control" unique_id=151539742]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_44lj5")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1466781685]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0070001
+anchor_bottom = 1.0120001
+offset_right = -8.064087
+offset_bottom = -7.776062
+texture = ExtResource("2_m1h33")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=2127202272]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.347
+anchor_top = 0.49400002
+anchor_right = 0.66
+anchor_bottom = 0.76500005
+offset_left = 48.25598
+offset_top = -32.112
+offset_right = -56.320007
+offset_bottom = -117.72003
+
+[node name="Button" type="Button" parent="TextureRect/VBoxContainer" unique_id=967250144]
+layout_mode = 2
+text = "Story Mode"
+
+[node name="Button2" type="Button" parent="TextureRect/VBoxContainer" unique_id=1057450550]
+layout_mode = 2
+text = "Shooter"
+
+[node name="Button3" type="Button" parent="TextureRect/VBoxContainer" unique_id=552724246]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="TextureRect/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
