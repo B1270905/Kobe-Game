@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://snyiyvj654sw"]
+
+[ext_resource type="Script" uid="uid://btrpsm75s574y" path="res://Scripts/Stickey_Meatball.gd" id="1_x6aq2"]
+[ext_resource type="Texture2D" uid="uid://80yqbb4gabob" path="res://Levels/Meatball Z Art/Stickey Meatball.png Good.png" id="2_psmcf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psmcf"]
+size = Vector2(29, 28)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1487680446]
+collision_layer = 12
+collision_mask = 10
+script = ExtResource("1_x6aq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=80317128]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_psmcf")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2142568468]
+texture_filter = 1
+scale = Vector2(0.5549219, 0.5399239)
+texture = ExtResource("2_psmcf")

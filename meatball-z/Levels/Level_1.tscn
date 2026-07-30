@@ -1,28 +1,264 @@
 [gd_scene format=3 uid="uid://cvpa8yx7bj3tf"]
 
-[ext_resource type="Texture2D" uid="uid://p6fy00uyu8u5" path="res://icon.svg" id="1_ka50d"]
+[ext_resource type="Texture2D" uid="uid://x61jg2o813w8" path="res://Levels/Meatball Z Art/Backgrend (1).png" id="1_43ny2"]
+[ext_resource type="Texture2D" uid="uid://ic4mqp4eebwa" path="res://Levels/Meatball Z Art/colour.png" id="1_uq0sc"]
+[ext_resource type="Texture2D" uid="uid://de3eqtb3lsg3t" path="res://Levels/Meatball Z Art/Brown floor.png" id="1_wsn87"]
 [ext_resource type="PackedScene" uid="uid://ddihilxf5ahwb" path="res://Prefabs/Player.tscn" id="2_8a5oj"]
+[ext_resource type="PackedScene" uid="uid://ckc2xel0nsi0j" path="res://Prefabs/Stickey_Wall_Short.tscn" id="3_nl7va"]
+[ext_resource type="Texture2D" uid="uid://sr5x77thf7er" path="res://Levels/Meatball Z Art/Tree.png" id="4_uq0sc"]
+[ext_resource type="PackedScene" uid="uid://bibchefepnrpd" path="res://Prefabs/NEXTLEVEL.tscn" id="4_waoec"]
+[ext_resource type="Texture2D" uid="uid://bltiej4u4sis7" path="res://Levels/Meatball Z Art/Beehive.png" id="8_uq0sc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8a5oj"]
-size = Vector2(1152, 80)
+size = Vector2(688, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_waoec"]
+size = Vector2(552, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nl7va"]
-size = Vector2(26, 650)
+size = Vector2(133, 586)
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=672230960]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsn87"]
+size = Vector2(1144, 64)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=301291281]
-position = Vector2(576, 608)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uq0sc"]
+size = Vector2(5483, 533)
+
+[node name="Main" type="Node2D" unique_id=1788506306]
+
+[node name="Colour" type="Sprite2D" parent="." unique_id=649932092]
+position = Vector2(2170.5, 447.5)
+scale = Vector2(7.671, 5.942)
+texture = ExtResource("1_uq0sc")
+
+[node name="Backgrend(1)" type="Sprite2D" parent="." unique_id=896032298]
+texture_filter = 1
+position = Vector2(407, 352)
+scale = Vector2(1.768, 1.768)
+texture = ExtResource("1_43ny2")
+
+[node name="Backgrend(1)2" type="Sprite2D" parent="." unique_id=170958808]
+texture_filter = 1
+position = Vector2(2175.0002, 352.00003)
+scale = Vector2(1.768, 1.768)
+texture = ExtResource("1_43ny2")
+
+[node name="Backgrend(1)3" type="Sprite2D" parent="." unique_id=1365513865]
+texture_filter = 1
+position = Vector2(3943, 352)
+scale = Vector2(1.768, 1.768)
+texture = ExtResource("1_43ny2")
+
+[node name="Player" parent="." unique_id=2029801533 instance=ExtResource("2_8a5oj")]
+position = Vector2(192, 544)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=672230960]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=301291281]
+position = Vector2(344, 608)
 shape = SubResource("RectangleShape2D_8a5oj")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1445548926]
-position = Vector2(596, 608)
-scale = Vector2(9.3125, 0.625)
-texture = ExtResource("1_ka50d")
+[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=1445548926]
+texture_filter = 1
+position = Vector2(-73.500046, 27.999962)
+scale = Vector2(10.349999, 3.4399998)
+texture = ExtResource("1_wsn87")
 
-[node name="CharacterBody2D" parent="." unique_id=2029801533 instance=ExtResource("2_8a5oj")]
-position = Vector2(232, 208)
+[node name="Stickey_Wall2" parent="." unique_id=1166835683 instance=ExtResource("3_nl7va")]
+position = Vector2(664, 496)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1359223487]
-position = Vector2(3, 315)
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=18123902]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=883589570]
+position = Vector2(972, 452)
+shape = SubResource("RectangleShape2D_waoec")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D2/CollisionShape2D" unique_id=749911165]
+texture_filter = 1
+position = Vector2(2.9999409, 18.000011)
+scale = Vector2(7.1600003, 2.0450003)
+texture = ExtResource("1_wsn87")
+
+[node name="Platform" type="StaticBody2D" parent="." unique_id=1351475881]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" unique_id=1521136065]
+position = Vector2(1568, 592)
+shape = SubResource("RectangleShape2D_waoec")
+
+[node name="Icon" type="Sprite2D" parent="Platform/CollisionShape2D" unique_id=4899648]
+texture_filter = 1
+position = Vector2(-3.0000353, 19.000004)
+scale = Vector2(7.129999, 1.9779692)
+texture = ExtResource("1_wsn87")
+
+[node name="Stickey_Wall" parent="." unique_id=104439723 instance=ExtResource("3_nl7va")]
+position = Vector2(2888, 512)
+rotation = 1.5707964
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=282254880]
+position = Vector2(632, -72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1586554884]
+position = Vector2(1568, 592)
+shape = SubResource("RectangleShape2D_waoec")
+
+[node name="Icon" type="Sprite2D" parent="Platform2/CollisionShape2D" unique_id=1308254828]
+texture_filter = 1
+position = Vector2(-0.50008297, 17.999985)
+scale = Vector2(7.1099997, 1.9959372)
+texture = ExtResource("1_wsn87")
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=938205919]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=845281015]
+position = Vector2(-69, 353)
 shape = SubResource("RectangleShape2D_nl7va")
+
+[node name="Icon" type="Sprite2D" parent="Wall" unique_id=1659676489]
+texture_filter = 1
+position = Vector2(-80, 308)
+scale = Vector2(14.1875, 16.90625)
+texture = ExtResource("4_uq0sc")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1696077003]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1629511745]
+position = Vector2(3580, 516)
+shape = SubResource("RectangleShape2D_wsn87")
+
+[node name="Icon" type="Sprite2D" parent="Floor" unique_id=1511971626]
+texture_filter = 1
+position = Vector2(3578.5, 540)
+scale = Vector2(14.63, 2.7150002)
+texture = ExtResource("1_wsn87")
+
+[node name="NextLevel" parent="." unique_id=754853894 instance=ExtResource("4_waoec")]
+position = Vector2(3797, 123)
+next_scene = "uid://bsiamb2076icb"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=47097689]
+offset_right = 1120.0
+offset_bottom = 64.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1187843856]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12100001
+anchor_top = 0.625
+anchor_right = 0.12100001
+anchor_bottom = 0.625
+offset_left = 24.479996
+offset_top = 160.0
+offset_right = 358.47998
+offset_bottom = 313.0
+text = "These Meatballs can stick 
+to walls and floors with 
+Black outlines then can be 
+used as platforms. Try to 
+get over the wall infront of you using them 
+P.S Carefull how many you use"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1990872880]
+offset_left = 2320.0
+offset_top = 184.0
+offset_right = 2600.0
+offset_bottom = 312.0
+
+[node name="Label" type="Label" parent="TextureRect2" unique_id=1188179962]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 16.0
+offset_right = 395.0
+offset_bottom = 143.0
+text = "
+Meatballs can also stick 
+together see if you can use 
+them to make a platform to 
+cross this gap."
+
+[node name="Icon4" type="Sprite2D" parent="." unique_id=1828383132]
+texture_filter = 1
+position = Vector2(29, 459)
+scale = Vector2(0.96874994, 0.96874994)
+texture = ExtResource("8_uq0sc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=365984529]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=493051487]
+position = Vector2(2146.5, 1069)
+shape = SubResource("RectangleShape2D_uq0sc")
+
+[node name="Label" type="Label" parent="." unique_id=1972760294]
+offset_left = -390.0
+offset_top = -1088.0
+offset_right = 90.0
+offset_bottom = -1058.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label" unique_id=833571474]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 4.0
+offset_right = 1040.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label" unique_id=1825948484]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 4.0
+offset_right = 1030.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label2" type="Label" parent="Label" unique_id=686179788]
+layout_mode = 0
+offset_left = 1662.0
+offset_top = 14.0
+offset_right = 2142.0
+offset_bottom = 44.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label2" unique_id=138444219]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 4.0
+offset_right = 1040.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label2/Label" unique_id=1357176376]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 4.0
+offset_right = 1030.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label2" type="Label" parent="Label/Label2" unique_id=2105506699]
+layout_mode = 0
+offset_left = 1626.0
+offset_top = -3.0
+offset_right = 2106.0
+offset_bottom = 20.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label2/Label2" unique_id=1118756542]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 4.0
+offset_right = 1040.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label2/Label2/Label" unique_id=470669555]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 4.0
+offset_right = 1030.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[connection signal="area_entered" from="NextLevel" to="NextLevel" method="_on_area_entered"]
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]

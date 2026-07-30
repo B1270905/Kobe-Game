@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://brhaot1rxbmk4"]
 
-[ext_resource type="Script" uid="uid://b1nc13x37mp42" path="res://Levels/Title_screen.gd" id="1_44lj5"]
-[ext_resource type="Texture2D" uid="uid://8u7mhamxqlip" path="res://Levels/images.webp" id="2_m1h33"]
+[ext_resource type="Script" uid="uid://b1nc13x37mp42" path="res://Scripts/Title_screen.gd" id="1_44lj5"]
+[ext_resource type="Texture2D" uid="uid://d0v1rdg8yxu4" path="res://Levels/chef-cooker-dessert-cook.jpg" id="2_44lj5"]
 
 [node name="Title_Screen" type="Control" unique_id=151539742]
 layout_mode = 3
-anchors_preset = 15
+anchor_left = 0.007
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 1.049
+offset_left = -8.064
+offset_bottom = -39.752014
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_44lj5")
@@ -17,9 +19,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0070001
 anchor_bottom = 1.0120001
+offset_top = -3.0
 offset_right = -8.064087
-offset_bottom = -7.776062
-texture = ExtResource("2_m1h33")
+offset_bottom = 32.319946
+texture = ExtResource("2_44lj5")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=2127202272]
 layout_mode = 1
@@ -28,22 +31,31 @@ anchor_left = 0.347
 anchor_top = 0.49400002
 anchor_right = 0.66
 anchor_bottom = 0.76500005
-offset_left = 48.25598
-offset_top = -32.112
-offset_right = -56.320007
-offset_bottom = -117.72003
+offset_left = 8.255981
+offset_top = -198.40201
+offset_right = -120.32001
+offset_bottom = -279.49506
 
 [node name="Button" type="Button" parent="TextureRect/VBoxContainer" unique_id=967250144]
 layout_mode = 2
-text = "Story Mode"
+text = "Game Mode"
 
 [node name="Button2" type="Button" parent="TextureRect/VBoxContainer" unique_id=1057450550]
 layout_mode = 2
-text = "Shooter"
+text = "Settings"
 
 [node name="Button3" type="Button" parent="TextureRect/VBoxContainer" unique_id=552724246]
 layout_mode = 2
 text = "Quit"
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1265602587]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 184.0
+offset_right = 1128.0
+offset_bottom = 304.0
+text = "NEVER TRUST A SKINNY CHEF
+"
 
 [connection signal="pressed" from="TextureRect/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

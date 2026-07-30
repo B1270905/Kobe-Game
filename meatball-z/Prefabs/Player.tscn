@@ -1,18 +1,102 @@
 [gd_scene format=3 uid="uid://ddihilxf5ahwb"]
 
-[ext_resource type="Texture2D" uid="uid://p6fy00uyu8u5" path="res://icon.svg" id="1_um8lo"]
 [ext_resource type="Script" uid="uid://be7wvsn11krul" path="res://Scripts/player.gd" id="1_x3d5u"]
+[ext_resource type="Texture2D" uid="uid://lhwconp12301" path="res://Levels/Meatball Z Art/Chef.png Good.png" id="2_b43ah"]
+[ext_resource type="PackedScene" uid="uid://bqgin1eiyplgx" path="res://Prefabs/Meatball_Canon.tscn" id="3_b43ah"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3d5u"]
-size = Vector2(48, 64)
+size = Vector2(36.5, 74.5)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2029801533]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b43ah"]
+size = Vector2(64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b43ah"]
+atlas = ExtResource("2_b43ah")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shmu5"]
+atlas = ExtResource("2_b43ah")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxq8l"]
+atlas = ExtResource("2_b43ah")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg3t4"]
+atlas = ExtResource("2_b43ah")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_javds"]
+atlas = ExtResource("2_b43ah")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ygst"]
+atlas = ExtResource("2_b43ah")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhekp"]
+atlas = ExtResource("2_b43ah")
+region = Rect2(0, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8lmw"]
+atlas = ExtResource("2_b43ah")
+region = Rect2(100, 200, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k2qb3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b43ah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shmu5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxq8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gg3t4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_javds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ygst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhekp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8lmw")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2029801533 groups=["player"]]
+collision_layer = 3
 script = ExtResource("1_x3d5u")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1422321740]
-position = Vector2(-2.3841858e-07, 0)
-scale = Vector2(0.3125, 0.46875003)
-texture = ExtResource("1_um8lo")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=642631709]
+position = Vector2(-0.75, 0.75)
 shape = SubResource("RectangleShape2D_x3d5u")
+
+[node name="MeatballCanon" parent="." unique_id=919939309 instance=ExtResource("3_b43ah")]
+position = Vector2(8, -1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2059649386]
+position = Vector2(200, -64)
+position_smoothing_enabled = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1526155218 groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1658240505]
+shape = SubResource("RectangleShape2D_b43ah")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1485723504]
+texture_filter = 1
+position = Vector2(7.6293945e-06, -1.9073486e-06)
+scale = Vector2(0.95, 0.78666663)
+sprite_frames = SubResource("SpriteFrames_k2qb3")
+animation = &"walk"

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ckc2xel0nsi0j"]
+
+[ext_resource type="Script" uid="uid://balmqnnm4wflu" path="res://Scripts/Stickey_Wall.gd" id="1_ovk0y"]
+[ext_resource type="Texture2D" uid="uid://c8bqkv3ctuctp" path="res://Levels/Meatball Z Art/Stickey Wall.png Good.png" id="2_qtseo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ovk0y"]
+size = Vector2(56, 240)
+
+[node name="Stickey_Wall_Short" type="StaticBody2D" unique_id=1166835683 groups=["stickey"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_ovk0y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1795358103]
+texture_filter = 1
+position = Vector2(7.000002, -1.9999981)
+scale = Vector2(1.5, 2.52)
+texture = ExtResource("2_qtseo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1965678931]
+shape = SubResource("RectangleShape2D_ovk0y")

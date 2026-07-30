@@ -1,8 +1,15 @@
 extends CharacterBody2D
 
+@onready var animated_sprite = $AnimatedSprite2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+
+
+func _process(delta):
+	if Input.is_action_just_pressed("Restart"):
+		get_tree().reload_current_scene()
+		
 
 
 func _physics_process(delta: float) -> void:
@@ -16,10 +23,29 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("Player_Left", "Player_Right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	# Get input direction (-1 for left, 1 for right, etc.)
+	var direction = Input.get_axis("Player_Left", "Player_Right")
+	
+	if direction != 0:
+		# Move the character
+		velocity.x = direction * SPEED
+		
+		# Play the walk animation
+		animated_sprite.play("walk")
+		
+		# Flip the sprite depending on which way they are walking
+		if direction < 0:
+			animated_sprite.flip_h = true
+		else:
+			animated_sprite.flip_h = false
+	else:
+		# Stop movement and play idle
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		animated_sprite.frame = 0
+		
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()

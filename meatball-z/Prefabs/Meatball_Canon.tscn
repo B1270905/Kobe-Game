@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bqgin1eiyplgx"]
+
+[ext_resource type="Script" uid="uid://crohaf8g5v1ji" path="res://Scripts/Meatball_Canon.gd" id="1_140hu"]
+[ext_resource type="Texture2D" uid="uid://c07qo2ytfl43e" path="res://Levels/Meatball Z Art/Cannon (1).pngGood.png" id="2_ti2ky"]
+
+[node name="MeatballCanon" type="Node2D" unique_id=919939309]
+script = ExtResource("1_140hu")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1099297971]
+texture_filter = 1
+position = Vector2(32, -3.000002)
+scale = Vector2(2, 1.2300001)
+texture = ExtResource("2_ti2ky")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=2118134721]
+position = Vector2(80, 0)
+
+[node name="Timer" type="Timer" parent="." unique_id=1942625421]
+wait_time = 0.05
+one_shot = true

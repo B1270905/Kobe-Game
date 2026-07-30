@@ -1,0 +1,252 @@
+[gd_scene format=3 uid="uid://bsiamb2076icb"]
+
+[ext_resource type="Texture2D" uid="uid://ic4mqp4eebwa" path="res://Levels/Meatball Z Art/colour.png" id="1_vb2uo"]
+[ext_resource type="Texture2D" uid="uid://x61jg2o813w8" path="res://Levels/Meatball Z Art/Backgrend (1).png" id="2_dbc5v"]
+[ext_resource type="PackedScene" uid="uid://ddihilxf5ahwb" path="res://Prefabs/Player.tscn" id="2_hfjsb"]
+[ext_resource type="PackedScene" uid="uid://0bpxcqoxdv7q" path="res://Prefabs/stickey_wall_long.tscn" id="3_hfjsb"]
+[ext_resource type="PackedScene" uid="uid://ckc2xel0nsi0j" path="res://Prefabs/Stickey_Wall_Short.tscn" id="4_4vss1"]
+[ext_resource type="Texture2D" uid="uid://de3eqtb3lsg3t" path="res://Levels/Meatball Z Art/Brown floor.png" id="5_7ubt2"]
+[ext_resource type="PackedScene" uid="uid://bibchefepnrpd" path="res://Prefabs/NEXTLEVEL.tscn" id="5_tfynm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vss1"]
+size = Vector2(330.5, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfjsb"]
+size = Vector2(406, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ubt2"]
+size = Vector2(56.499992, 635)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfynm"]
+size = Vector2(628, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vb2uo"]
+size = Vector2(639, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbc5v"]
+size = Vector2(6676.5, 544)
+
+[node name="Node2D" type="Node2D" unique_id=1949088970]
+
+[node name="Label" type="Label" parent="." unique_id=1452555290]
+offset_left = -582.0
+offset_top = -1076.0
+offset_right = -102.0
+offset_bottom = -1046.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label" unique_id=766122492]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 4.0
+offset_right = 1040.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label" unique_id=1660249465]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 4.0
+offset_right = 1030.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label2" type="Label" parent="Label" unique_id=283788548]
+layout_mode = 0
+offset_left = 1669.0
+offset_top = 13.0
+offset_right = 2149.0
+offset_bottom = 43.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label2" unique_id=364785309]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 4.0
+offset_right = 1040.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label2/Label" unique_id=577416839]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 4.0
+offset_right = 1030.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label3" type="Label" parent="Label" unique_id=1317698507]
+layout_mode = 0
+offset_left = 3376.0
+offset_top = 25.0
+offset_right = 3856.0
+offset_bottom = 55.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label3" unique_id=11914183]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 4.0
+offset_right = 1040.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label3/Label" unique_id=1316130390]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 4.0
+offset_right = 1030.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label2" type="Label" parent="Label/Label3" unique_id=1662402569]
+layout_mode = 0
+offset_left = 1669.0
+offset_top = 13.0
+offset_right = 2149.0
+offset_bottom = 43.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label3/Label2" unique_id=652096374]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 4.0
+offset_right = 1040.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Label" type="Label" parent="Label/Label3/Label2/Label" unique_id=1445752133]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 4.0
+offset_right = 1030.0
+offset_bottom = 34.0
+text = "If your reading this your not playing the game right"
+
+[node name="Colour" type="Sprite2D" parent="." unique_id=1816417366]
+position = Vector2(2576, 710)
+scale = Vector2(7.8690004, 6.6540003)
+texture = ExtResource("1_vb2uo")
+
+[node name="Backgrend(1)" type="Sprite2D" parent="." unique_id=1516352535]
+position = Vector2(622.99994, 405.99997)
+rotation = 3.1415927
+scale = Vector2(2.125, -2.1)
+texture = ExtResource("2_dbc5v")
+
+[node name="Backgrend(1)2" type="Sprite2D" parent="." unique_id=1023749081]
+position = Vector2(2748, 404.0001)
+rotation = 3.1415927
+scale = Vector2(2.125, -2.1)
+texture = ExtResource("2_dbc5v")
+
+[node name="Backgrend(1)3" type="Sprite2D" parent="." unique_id=1369361567]
+position = Vector2(4873.0005, 404.00003)
+rotation = 3.1415927
+scale = Vector2(2.125, -2.1)
+texture = ExtResource("2_dbc5v")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=575021131]
+
+[node name="BrownFloor2" type="Sprite2D" parent="StaticBody2D" unique_id=871187839]
+texture_filter = 1
+position = Vector2(165.5, 643.00006)
+scale = Vector2(4.07, 1.23)
+texture = ExtResource("5_7ubt2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=11240230]
+position = Vector2(172, 635)
+shape = SubResource("RectangleShape2D_4vss1")
+
+[node name="CharacterBody2D" parent="." unique_id=2029801533 instance=ExtResource("2_hfjsb")]
+position = Vector2(80, 544)
+
+[node name="Stickey_Wall_Long" parent="." unique_id=1005623329 instance=ExtResource("3_hfjsb")]
+position = Vector2(100, 187)
+
+[node name="Stickey_Wall_Long2" parent="." unique_id=1658001356 instance=ExtResource("3_hfjsb")]
+position = Vector2(-57, 68)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=725790697]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=463769000]
+position = Vector2(663, 304)
+shape = SubResource("RectangleShape2D_hfjsb")
+
+[node name="Stickey_Wall_Short" parent="." unique_id=1166835683 instance=ExtResource("4_4vss1")]
+position = Vector2(1378, 306)
+rotation = 1.5707964
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1749045073]
+position = Vector2(1378, 306)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1825943878]
+position = Vector2(0.24996948, -438)
+shape = SubResource("RectangleShape2D_7ubt2")
+
+[node name="BrownFloor" type="Sprite2D" parent="StaticBody2D3" unique_id=975498791]
+position = Vector2(18.99997, -419.5)
+rotation = -1.5707964
+scale = Vector2(7.7900004, 2.1299999)
+texture = ExtResource("5_7ubt2")
+
+[node name="Stickey_Wall_Long3" parent="." unique_id=1617657118 instance=ExtResource("3_hfjsb")]
+position = Vector2(1806, 178)
+
+[node name="Stickey_Wall_Long4" parent="." unique_id=1046671660 instance=ExtResource("3_hfjsb")]
+position = Vector2(1806, 529)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1814425682]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=366166457]
+position = Vector2(3204, 934)
+shape = SubResource("RectangleShape2D_tfynm")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D4" unique_id=1187769504]
+texture_filter = 1
+position = Vector2(3199, 957.00006)
+scale = Vector2(-8.192587, 2.6086433)
+texture = ExtResource("5_7ubt2")
+
+[node name="Stickey_Wall_Short2" parent="." unique_id=2142019984 instance=ExtResource("4_4vss1")]
+position = Vector2(2719, 940.00006)
+rotation = 1.5707964
+scale = Vector2(1.3803152, 1.4618876)
+
+[node name="Stickey_Wall_Long5" parent="." unique_id=1924075865 instance=ExtResource("3_hfjsb")]
+position = Vector2(2074, 178)
+scale = Vector2(1, 1.2399997)
+
+[node name="Stickey_Wall_Short3" parent="." unique_id=1941727078 instance=ExtResource("4_4vss1")]
+position = Vector2(4182, 948)
+rotation = 1.5707964
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=495398634]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=783811232]
+position = Vector2(4616.5, 946.5)
+shape = SubResource("RectangleShape2D_vb2uo")
+
+[node name="BrownFloor" type="Sprite2D" parent="StaticBody2D5" unique_id=88701548]
+texture_filter = 1
+position = Vector2(4618.9995, 971)
+scale = Vector2(8.280002, 2.5474992)
+texture = ExtResource("5_7ubt2")
+
+[node name="NEXTLEVEL" parent="." unique_id=754853894 instance=ExtResource("5_tfynm")]
+position = Vector2(4954, 561)
+
+[node name="BrownFloor" type="Sprite2D" parent="." unique_id=302270312]
+texture_filter = 1
+position = Vector2(664, 316)
+scale = Vector2(5.2400002, 1.4399998)
+texture = ExtResource("5_7ubt2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1560590944]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=143860578]
+position = Vector2(2430.75, 1382)
+shape = SubResource("RectangleShape2D_dbc5v")
+
+[connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]

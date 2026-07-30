@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bibchefepnrpd"]
+
+[ext_resource type="Texture2D" uid="uid://p6fy00uyu8u5" path="res://icon.svg" id="1_4tu2a"]
+[ext_resource type="Script" uid="uid://c32vsvoq8u5fb" path="res://Scripts/nextlevel.gd" id="1_tg6m1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tg6m1"]
+size = Vector2(752, 744)
+
+[node name="NEXTLEVEL" type="Area2D" unique_id=754853894 groups=["player"]]
+script = ExtResource("1_tg6m1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1910436521]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_tg6m1")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1521324109]
+position = Vector2(1.5258789e-05, 1.5258789e-05)
+scale = Vector2(5.953125, 5.953125)
+texture = ExtResource("1_4tu2a")
